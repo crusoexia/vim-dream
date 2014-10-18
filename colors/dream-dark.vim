@@ -275,7 +275,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "		Incsearch"
 exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fmt_bold
+exe "hi! CursorLineNr"  .s:fg_darkyellow  .s:bg_none        .s:fmt_bold
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
@@ -313,47 +313,19 @@ endif
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
-
 exe "hi! Constant"        .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
-"		Character"
-"		Number"
-"		Boolean"
-"		Float"
-
 exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_orange      .s:bg_none        .s:fmt_none
-
+exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_orange      .s:bg_none        .s:fmt_none
-"		SpecialChar"
-"		Tag"
-"		Delimiter"
-"		SpecialComment"
-"		Debug"
-
+exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_bold
 exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
-"		Conditional"
-"		Repeat"
-"		Label"
-
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-"		Include"
-"		Define"
-"		Macro"
-"		PreCondit"
-
 exe "hi! Operator"        .s:fg_foreground  .s:bg_none        .s:fmt_none
-"		Keyword"
-"		Exception"
-
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
-
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
-
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
 
 " Quickfix window highlighting
