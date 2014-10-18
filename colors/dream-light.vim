@@ -26,35 +26,35 @@ if !exists("g:dream_use_iTerm_colors")
   let g:dream_use_iTerm_colors = 0
 endif
 
-set background=light
+set background=dark
 hi clear
 
 if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "dream-light"
+let g:colors_name = "dream-light"
 
 "}}}
 " GUI And Cterm Palettes:"{{{
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#fdfffd"
-  let s:foreground = "#292429"
-  let s:selection  = "#575b61"
-  let s:line       = "#d8d8dd"
+  let s:background = "#ffffff"
+  let s:foreground = "#031634"
+  let s:selection  = "#c3c3c3"
+  let s:line       = "#f3f3f3"
   let s:comment    = "#808890"
   let s:red        = "#e73c50"
-  let s:orange     = "#e97f02"
+  let s:orange     = "#033649"
   let s:yellow     = "#fcfcc4"
-  let s:darkyellow = "#F8CA00"
-  let s:green      = "#8A9B0F"
-  let s:aqua       = "#00A0B0"
+  let s:darkyellow = "#7b238d"
+  let s:green      = "#8a9b0f"
+  let s:aqua       = "#008C9E"
   let s:blue       = "#6bb6c9"
   let s:purple     = "#ae81ff"
   let s:pink       = "#bd1550"
-  let s:window     = "#505050"
+  let s:window     = "#f3f3f3"
   let s:darkcolumn = "#2c2c2c"
   let s:addbg      = "#d7ffaf"
   let s:addfg      = "#5f875f"
@@ -269,13 +269,13 @@ exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
 exe "hi! DiffText"      .s:fg_background  .s:bg_darkyellow  .s:fmt_none
 exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
-exe "hi! VertSplit"     .s:fg_none        .s:bg_none        .s:fmt_none
+exe "hi! VertSplit"     .s:fg_window      .s:bg_window      .s:fmt_none
 exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "		Incsearch"
 exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! CursorLineNr"  .s:fg_pink        .s:bg_line        .s:fmt_bold
+exe "hi! CursorLineNr"  .s:fg_darkyellow  .s:bg_none        .s:fmt_bold
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
@@ -285,7 +285,7 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 "		PmenuSbar"
 "		PmenuThumb"
 exe "hi! Question"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-exe "hi! Search"        .s:fg_background  .s:bg_yellow      .s:fmt_none
+exe "hi! Search"        .s:fg_background  .s:bg_pink        .s:fmt_none
 exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
@@ -313,47 +313,19 @@ endif
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
-
 exe "hi! Constant"        .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
-"		Character"
-"		Number"
-"		Boolean"
-"		Float"
-
 exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_orange      .s:bg_none        .s:fmt_none
-
-exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Structure"       .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_orange      .s:bg_none        .s:fmt_none
-"		SpecialChar"
-"		Tag"
-"		Delimiter"
-"		SpecialComment"
-"		Debug"
-
-exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
-"		Conditional"
-"		Repeat"
-"		Label"
-
+exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
+exe "hi! Type"            .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! Statement"       .s:fg_orange      .s:bg_none        .s:fmt_bold
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-"		Include"
-"		Define"
-"		Macro"
-"		PreCondit"
-
-exe "hi! Operator"        .s:fg_foreground  .s:bg_none        .s:fmt_none
-"		Keyword"
-"		Exception"
-
+exe "hi! Operator"        .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
-
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
-
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
 
 " Quickfix window highlighting
