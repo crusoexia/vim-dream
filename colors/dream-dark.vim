@@ -41,7 +41,7 @@ let colors_name = "dream-dark"
 if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#292429"
-  let s:foreground = "#c5c8c6"
+  let s:foreground = "#d5d8d6"
   let s:selection  = "#575b61"
   let s:line       = "#383a3e"
   let s:comment    = "#808890"
@@ -319,8 +319,8 @@ exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_bold
-exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_bold
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_foreground  .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
