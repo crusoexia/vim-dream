@@ -54,8 +54,8 @@ if has("gui_running")
   let s:blue       = "#6bb6c9"
   let s:purple     = "#ae81ff"
   let s:pink       = "#bd1550"
-  let s:window     = "#f3f3f3"
-  let s:darkcolumn = "#2c2c2c"
+  let s:window     = "#e3e3e3"
+  let s:darkcolumn = "#f3f3f3"
   let s:addbg      = "#d7ffaf"
   let s:addfg      = "#5f875f"
   let s:changebg   = "#d7d7ff"
@@ -263,19 +263,19 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "		CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! Directory"     .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
 exe "hi! DiffText"      .s:fg_background  .s:bg_darkyellow  .s:fmt_none
 exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! VertSplit"     .s:fg_window      .s:bg_window      .s:fmt_none
-exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
-exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
-exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
+exe "hi! Folded"        .s:fg_comment     .s:bg_window      .s:fmt_none
+exe "hi! FoldColumn"    .s:fg_none        .s:bg_window      .s:fmt_none
+exe "hi! SignColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 "		Incsearch"
 exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! CursorLineNr"  .s:fg_darkyellow  .s:bg_none        .s:fmt_bold
+exe "hi! CursorLineNr"  .s:fg_darkyellow  .s:bg_line        .s:fmt_bold
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_darkyellow  .s:bg_none        .s:fmt_none
@@ -287,7 +287,7 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! Question"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Search"        .s:fg_background  .s:bg_pink        .s:fmt_none
 exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
+exe "hi! SpellCap"      .s:fg_aqua        .s:bg_red         .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_red         .s:bg_darkred     .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_purple      .s:bg_darkpurple  .s:fmt_undr
