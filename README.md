@@ -6,10 +6,10 @@ A color scheme focus on coding. Its easy to read, comfort for eyes, provide both
 Usage
 ---------
 
-###Dream light
+Dream light:
 
     colorscheme dream-light
 
-###Dream dark
+Dream dark:
 
     colorscheme dream-dark
