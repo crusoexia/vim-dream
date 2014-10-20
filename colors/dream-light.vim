@@ -41,7 +41,7 @@ let g:colors_name = "dream-light"
 if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#ffffff"
-  let s:foreground = "#031634"
+  let s:foreground = "#334664"
   let s:selection  = "#c3c3c3"
   let s:line       = "#f3f3f3"
   let s:comment    = "#808890"
@@ -263,7 +263,7 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "		CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Directory"     .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
@@ -296,7 +296,7 @@ exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
 "		TabLineSel"
-exe "hi! Title"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
+exe "hi! Title"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "		VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
