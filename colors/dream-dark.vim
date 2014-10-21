@@ -112,14 +112,14 @@ else
     let s:line       = "235"
     let s:comment    = "243"
     let s:red        = "196"
-    let s:orange     = "172"
+    let s:orange     = "166"
     let s:yellow     = "186"
-    let s:darkyellow = "228"   
-    let s:green      = "10"
-    let s:aqua       = "74"
+    let s:darkyellow = "214"   
+    let s:green      = "64"
+    let s:aqua       = "31"
     let s:blue       = "38"
     let s:purple     = "13"
-    let s:pink       = "13"
+    let s:pink       = "125"
   endif
 endif
 
