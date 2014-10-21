@@ -62,7 +62,7 @@ if has("gui_running")
   let s:changefg   = "#5f5f87"
   let s:darkblue   = "#00005f"
   let s:darkcyan   = "#005f5f"
-  let s:darkred    = "#5f0000"
+  let s:darkred    = "#6f0000"
   let s:darkpurple = "#5f005f"
 else
   let s:vmode      = "cterm"
