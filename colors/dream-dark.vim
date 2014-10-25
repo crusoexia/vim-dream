@@ -322,7 +322,7 @@ exe "hi! Structure"       .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-exe "hi! Operator"        .s:fg_foreground  .s:bg_none        .s:fmt_none
+exe "hi! Operator"        .s:fg_blue        .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
