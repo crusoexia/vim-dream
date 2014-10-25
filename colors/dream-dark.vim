@@ -40,7 +40,7 @@ let colors_name = "dream-dark"
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#373B44"
+  let s:background = "#373A3B"
   let s:foreground = "#DEE1B6"
   let s:selection  = "#575B61"
   let s:line       = "#3d4143"
@@ -296,7 +296,7 @@ exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
 "		TabLineSel"
-exe "hi! Title"         .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Title"         .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "		VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
@@ -313,12 +313,12 @@ endif
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
-exe "hi! Constant"        .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Constant"        .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Structure"       .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Type"            .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Structure"       .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
