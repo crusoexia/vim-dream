@@ -40,30 +40,30 @@ let colors_name = "dream-dark"
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#373b44"
-  let s:foreground = "#d5d8d6"
-  let s:selection  = "#575b61"
-  let s:line       = "#383a3e"
+  let s:background = "#373B44"
+  let s:foreground = "#DEE1B6"
+  let s:selection  = "#575B61"
+  let s:line       = "#383A3E"
   let s:comment    = "#808890"
-  let s:red        = "#e73c50"
-  let s:orange     = "#bd5532"
-  let s:yellow     = "#fcfcc4"
-  let s:darkyellow = "#e1b866"
-  let s:green      = "#8a9b0f"
-  let s:aqua       = "#73c8a9"
-  let s:blue       = "#6bb6c9"
-  let s:purple     = "#ae81ff"
-  let s:pink       = "#bd1550"
+  let s:red        = "#E73C50"
+  let s:orange     = "#BD5532"
+  let s:yellow     = "#FCFCC4"
+  let s:darkyellow = "#E1B866"
+  let s:green      = "#8A9B0F"
+  let s:aqua       = "#73C8A9"
+  let s:blue       = "#6BB6C9"
+  let s:purple     = "#AE81FF"
+  let s:pink       = "#F08F6E"
   let s:window     = "#505050"
-  let s:darkcolumn = "#2c2c2c"
-  let s:addbg      = "#5f875f"
-  let s:addfg      = "#d7ffaf"
-  let s:changebg   = "#5f5f87"
-  let s:changefg   = "#d7d7ff"
-  let s:darkblue   = "#00005f"
-  let s:darkcyan   = "#005f5f"
-  let s:darkred    = "#5f0000"
-  let s:darkpurple = "#5f005f"
+  let s:darkcolumn = "#2C2C2C"
+  let s:addbg      = "#5F875F"
+  let s:addfg      = "#D7FFAF"
+  let s:changebg   = "#5F5F87"
+  let s:changefg   = "#D7D7FF"
+  let s:darkblue   = "#00005F"
+  let s:darkcyan   = "#005F5F"
+  let s:darkred    = "#5F0000"
+  let s:darkpurple = "#5F005F"
 else
   let s:vmode      = "cterm"
   let s:background = "234"
@@ -319,8 +319,8 @@ exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_foreground  .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
