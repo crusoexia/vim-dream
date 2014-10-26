@@ -66,7 +66,7 @@ if has("gui_running")
   let s:darkpurple = "#5F005F"
 else
   let s:vmode      = "cterm"
-  let s:background = "234"
+  let s:background = "235"
   let s:window     = "236"
   let s:darkcolumn = "234"
   let s:addbg      = "65"
@@ -111,14 +111,14 @@ else
     let s:selection  = "237"
     let s:line       = "235"
     let s:comment    = "243"
-    let s:red        = "196"
+    let s:red        = "124"
     let s:orange     = "166"
     let s:yellow     = "186"
-    let s:darkyellow = "214"   
-    let s:green      = "64"
-    let s:aqua       = "31"
+    let s:darkyellow = "179"   
+    let s:green      = "82"
+    let s:aqua       = "45"
     let s:blue       = "38"
-    let s:purple     = "13"
+    let s:purple     = "96"
     let s:pink       = "125"
   endif
 endif
