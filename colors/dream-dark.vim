@@ -40,21 +40,21 @@ let colors_name = "dream-dark"
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#292A2C"
+  let s:background = "#212121"
   let s:foreground = "#DEE1B6"
   let s:selection  = "#575B61"
   let s:line       = "#3d4143"
   let s:comment    = "#808890"
-  let s:red        = "#E73C50"
-  let s:orange     = "#BD5532"
+  let s:red        = "#e73c50"
+  let s:orange     = "#fd971f"
   let s:yellow     = "#FCFCC4"
   let s:darkyellow = "#E1B866"
-  let s:green      = "#8A9B0F"
-  let s:aqua       = "#73C8A9"
-  let s:blue       = "#6BB6C9"
-  let s:purple     = "#AE81FF"
-  let s:pink       = "#F08F6E"
-  let s:window     = "#505050"
+  let s:green      = "#97cc96"
+  let s:aqua       = "#3fb8cd"
+  let s:blue       = "#6bb6c9"
+  let s:purple     = "#B86795"
+  let s:pink       = "#7fff24"
+  let s:window     = "#1c1c1c"
   let s:darkcolumn = "#2C2C2C"
   let s:addbg      = "#5F875F"
   let s:addfg      = "#D7FFAF"
@@ -263,13 +263,13 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "		CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Directory"     .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
 exe "hi! DiffText"      .s:fg_background  .s:bg_darkyellow  .s:fmt_none
 exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
-exe "hi! VertSplit"     .s:fg_window      .s:bg_none        .s:fmt_none
+exe "hi! VertSplit"     .s:fg_window      .s:bg_window      .s:fmt_none
 exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
@@ -285,10 +285,10 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 "		PmenuSbar"
 "		PmenuThumb"
 exe "hi! Question"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-exe "hi! Search"        .s:fg_background  .s:bg_darkyellow  .s:fmt_none
+exe "hi! Search"        .s:fg_background  .s:bg_aqua        .s:fmt_none
 exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
-exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
+exe "hi! SpellLocal"    .s:fg_pink        .s:bg_darkcyan    .s:fmt_undr
 exe "hi! SpellBad"      .s:fg_red         .s:bg_darkred     .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_purple      .s:bg_darkpurple  .s:fmt_undr
 exe "hi! StatusLine"    .s:fg_comment     .s:bg_background  .s:fmt_revr
@@ -296,7 +296,7 @@ exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
 "		TabLineSel"
-exe "hi! Title"         .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Title"         .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "		VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
@@ -313,16 +313,16 @@ endif
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
-exe "hi! Constant"        .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Constant"        .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Identifier"      .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
-exe "hi! Statement"       .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_purple      .s:bg_none        .s:fmt_bold
+exe "hi! Statement"       .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
-exe "hi! Operator"        .s:fg_blue        .s:bg_none        .s:fmt_none
+exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
