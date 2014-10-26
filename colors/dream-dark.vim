@@ -315,7 +315,7 @@ endif
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! Identifier"      .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! Identifier"      .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_green       .s:bg_none        .s:fmt_none
