@@ -20,18 +20,3 @@ _Dream light:_
 _Dream dark:_
 
     colorscheme dream-dark
-
-Screenshots
---------
-
-### GUI
-
-![GUI light](./screenshots/gui-light.png)
-
-![GUI dark](./screenshots/gui-dark.png)
-
-### Terminal
-
-![Terminal light](./screenshots/terminal-light.png)
-
-![Terminal dark](./screenshots/terminal-dark.png)
