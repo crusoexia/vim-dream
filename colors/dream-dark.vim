@@ -40,21 +40,21 @@ let colors_name = "dream-dark"
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#282a36"
-  let s:foreground = "#f8f8f2"
-  let s:selection  = "#64666d"
-  let s:line       = "#3d4143"
+  let s:background = "#282A36"
+  let s:foreground = "#E8E8E2"
+  let s:selection  = "#64666D"
+  let s:line       = "#3D4143"
   let s:comment    = "#808890"
-  let s:red        = "#e73c50"
-  let s:orange     = "#fd971f"
-  let s:yellow     = "#f1fa8c"
+  let s:red        = "#E73C50"
+  let s:orange     = "#FD971F"
+  let s:yellow     = "#F1FA8C"
   let s:darkyellow = "#E1B866"
-  let s:green      = "#7fff24"
-  let s:aqua       = "#3fb8cd"
-  let s:blue       = "#6bb6c9"
+  let s:green      = "#7FFF24"
+  let s:aqua       = "#3FB8CD"
+  let s:blue       = "#6BB6C9"
   let s:purple     = "#C877A5"
-  let s:pink       = "#ff79c6"
-  let s:window     = "#64666d"
+  let s:pink       = "#FF79C6"
+  let s:window     = "#64666D"
   let s:darkcolumn = "#2C2C2C"
   let s:addbg      = "#5F875F"
   let s:addfg      = "#D7FFAF"
@@ -111,15 +111,15 @@ else
     let s:selection  = "239"
     let s:line       = "236"
     let s:comment    = "243"
-    let s:red        = "124"
+    let s:red        = "160"
     let s:orange     = "166"
     let s:yellow     = "186"
     let s:darkyellow = "179"   
     let s:green      = "82"
-    let s:aqua       = "45"
+    let s:aqua       = "38"
     let s:blue       = "38"
     let s:purple     = "96"
-    let s:pink       = "125"
+    let s:pink       = "206"
   endif
 endif
 
@@ -263,7 +263,7 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "		CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_bold
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
@@ -272,7 +272,7 @@ exe "hi! ErrorMsg"      .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! VertSplit"     .s:fg_window      .s:bg_window      .s:fmt_none
 exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
-exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
+exe "hi! SignColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 "		Incsearch"
 exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_darkyellow  .s:bg_none        .s:fmt_bold
@@ -314,19 +314,19 @@ endif
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Constant"        .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Identifier"      .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
-exe "hi! Statement"       .s:fg_purple      .s:bg_none        .s:fmt_none
-exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_purple      .s:bg_none        .s:fmt_bold
+exe "hi! PreProc"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
-exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
+exe "hi! Todo"            .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 
 " Quickfix window highlighting
 exe "hi! qfLineNr"        .s:fg_yellow      .s:bg_none        .s:fmt_none

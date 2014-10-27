@@ -20,3 +20,14 @@ _Dream light:_
 _Dream dark:_
 
     colorscheme dream-dark
+
+Screenshots
+---------
+
+_Dream dark:_
+
+![dream-dark](./screenshots/dream-dark.png)
+
+_Dream light:_
+
+![dream-light](./screenshots/dream-light.png)
