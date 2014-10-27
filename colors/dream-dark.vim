@@ -52,7 +52,7 @@ if has("gui_running")
   let s:green      = "#7fff24"
   let s:aqua       = "#3fb8cd"
   let s:blue       = "#6bb6c9"
-  let s:purple     = "#B86795"
+  let s:purple     = "#C877A5"
   let s:pink       = "#ff79c6"
   let s:window     = "#64666d"
   let s:darkcolumn = "#2C2C2C"
@@ -108,8 +108,8 @@ else
     let s:pink       = "5"
   else
     let s:foreground = "250"
-    let s:selection  = "237"
-    let s:line       = "235"
+    let s:selection  = "239"
+    let s:line       = "236"
     let s:comment    = "243"
     let s:red        = "124"
     let s:orange     = "166"
@@ -296,7 +296,7 @@ exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
 "		TabLineSel"
-exe "hi! Title"         .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Title"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "		VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
@@ -315,15 +315,15 @@ endif
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! Identifier"      .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_purple      .s:bg_none        .s:fmt_bold
+exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Statement"       .s:fg_purple      .s:bg_none        .s:fmt_bold
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
-exe "hi! Underlined"      .s:fg_darkyellow  .s:bg_none        .s:fmt_none
+exe "hi! Underlined"      .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_darkred     .s:fmt_undr
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
