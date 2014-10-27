@@ -263,7 +263,7 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 "		CursorIM"
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! Directory"     .s:fg_purple      .s:bg_none        .s:fmt_none
+exe "hi! Directory"     .s:fg_aqua        .s:bg_none        .s:fmt_bold
 exe "hi! DiffAdd"       .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffChange"    .s:fg_changefg    .s:bg_changebg    .s:fmt_none
 exe "hi! DiffDelete"    .s:fg_background  .s:bg_red         .s:fmt_none
@@ -296,7 +296,7 @@ exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
 "		TabLineSel"
-exe "hi! Title"         .s:fg_green  .s:bg_none        .s:fmt_none
+exe "hi! Title"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
 "		VisualNos"
 exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
@@ -313,14 +313,14 @@ endif
 " Generic Syntax Highlighting: (see :help group-name)"{{{
 " ----------------------------------------------------------------------------
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
-exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Constant"        .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! Identifier"      .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_darkyellow  .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Statement"       .s:fg_purple      .s:bg_none        .s:fmt_bold
+exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! PreProc"         .s:fg_darkyellow  .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Underlined"      .s:fg_pink        .s:bg_none        .s:fmt_none
