@@ -355,6 +355,15 @@ hi! link diffAdded Special
 "		diffSubname
 "		diffComment
 
+" Html:"{{{
+exe "hi! htmlTag"         .s:fg_orange           .s:bg_none        .s:fmt_none
+exe "hi! htmlEndTag"      .s:fg_orange           .s:bg_none        .s:fmt_none
+exe "hi! htmlTagName"     .s:fg_purple           .s:bg_none        .s:fmt_none
+exe "hi! htmlArg"         .s:fg_aqua             .s:bg_none        .s:fmt_bold
+exe "hi! htmlSpecialChar" .s:fg_red              .s:bg_none        .s:fmt_none
+
+" }}}
+
 "}}}
 " Legal:"{{{
 " ----------------------------------------------------------------------------
