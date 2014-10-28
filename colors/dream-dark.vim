@@ -41,7 +41,7 @@ let colors_name = "dream-dark"
 if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#282A36"
-  let s:foreground = "#E8E8E2"
+  let s:foreground = "#C8C8C2"
   let s:selection  = "#64666D"
   let s:line       = "#3D4143"
   let s:comment    = "#808890"
