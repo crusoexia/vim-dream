@@ -219,7 +219,7 @@ exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        Include"
 "        Define"
 "        Macro"
