@@ -1,17 +1,17 @@
 Vim dream
 =========
 
-A color scheme focus on coding. Its easy to read, comfort for eyes, provide both light and dark themes.
+A color scheme for vim, provide both dark and light theme.
 
 Install
----------
+-------
 
 [Vundle](https://github.com/gmarik/Vundle.vim)
 
     Plugin 'crusoexia/vim-dream'
 
 Usage
----------
+-----
 
 _Dream:_
 
@@ -21,8 +21,13 @@ _Dream light:_
 
     colorscheme dream-light
 
+Original dream-dark theme
+-------------------------
+
+For the original _dream-dark_ user, please refer to [vim-dracula](https://github.com/crusoexia/vim-dracula)
+
 Screenshots
----------
+-----------
 
 _Dream:_
 
