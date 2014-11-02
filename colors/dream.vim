@@ -26,25 +26,25 @@ if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#292429"
   let s:foreground = "#D5D8D6"
-  let s:window     = "#44464d"
-  let s:line       = "#383a3e"
-  let s:darkcolumn = "#2f2c2f"
-  let s:selection  = "#575b61"
+  let s:window     = "#44464D"
+  let s:line       = "#383A3E"
+  let s:darkcolumn = "#2F2C2F"
+  let s:selection  = "#575B61"
   let s:comment    = "#808890"
-  let s:error      = "#5f0000"
+  let s:error      = "#5F0000"
   
   let s:pink       = "#EE5E91"
   let s:green      = "#9AD74C"
   let s:aqua       = "#3FB8CD"
-  let s:yellow     = "#E7e582"
+  let s:yellow     = "#E7E582"
   let s:orange     = "#FBA44F"
-  let s:red        = "#e73c50"
+  let s:red        = "#E73C50"
 
-  let s:addfg      = "#d7ffaf"
-  let s:addbg      = "#5f875f"
-  let s:delbg      = "#f75f5f"
-  let s:changefg   = "#d7d7ff"
-  let s:changebg   = "#5f5f87"
+  let s:addfg      = "#D7FFAF"
+  let s:addbg      = "#5F875F"
+  let s:delbg      = "#F75F5F"
+  let s:changefg   = "#D7D7FF"
+  let s:changebg   = "#5F5F87"
 else
   let s:vmode      = "cterm"
   let s:background = "234"
@@ -199,7 +199,7 @@ exe "hi! PmenuSel"        .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 "exe "hi! Number"          .s:fg_red         .s:bg_none        .s:fmt_none
 "exe "hi! Float"           .s:fg_red         .s:bg_none        .s:fmt_none
-"exe "hi! Boolean"         .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Boolean"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "exe "hi! Character"       .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
 
@@ -213,13 +213,13 @@ exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 
 exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Label"           .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Conditional"
 "        Repeat"
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Include"
 "        Define"
 "        Macro"
@@ -234,7 +234,7 @@ exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_none
 "        Debug"
 
 exe "hi! Underlined"      .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! Todo"            .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_error       .s:fmt_undr
@@ -246,21 +246,23 @@ exe "hi! qfLineNr"        .s:fg_yellow      .s:bg_none        .s:fmt_none
 " ------------------
 
 " Vim command
-exe "hi! vimCommand"                .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! vimCommand"                    .s:fg_pink         .s:bg_none          .s:fmt_none
 
 " Javascript
-exe "hi! javaScriptFunction"        .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptFuncName"        .s:fg_yellow       .s:bg_none          .s:fmt_none
-exe "hi! javaScriptRailsFunction"   .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptBraces"          .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptArgument"        .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! javaScriptFunction"            .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! javaScriptFuncName"            .s:fg_yellow       .s:bg_none          .s:fmt_none
+exe "hi! javaScriptRailsFunction"       .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! javaScriptBraces"              .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! javaScriptArgument"            .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! jsFuncArgs"                    .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! jsThis"                        .s:fg_none         .s:bg_none          .s:fmt_none
 
 " Html
-exe "hi! htmlTag"                   .s:fg_foreground   .s:bg_none          .s:fmt_none
-exe "hi! htmlEndTag"                .s:fg_foreground   .s:bg_none          .s:fmt_none
-exe "hi! htmlTagName"               .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! htmlArg"                   .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! htmlSpecialChar"           .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! htmlTag"                       .s:fg_foreground   .s:bg_none          .s:fmt_none
+exe "hi! htmlEndTag"                    .s:fg_foreground   .s:bg_none          .s:fmt_none
+exe "hi! htmlTagName"                   .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! htmlArg"                       .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! htmlSpecialChar"               .s:fg_red          .s:bg_none          .s:fmt_none
 
 " Xml
 hi! link xmlTag     htmlTag
@@ -269,11 +271,39 @@ hi! link xmlTagName htmlTagName
 hi! link xmlAttrib  htmlArg
 
 " CSS
-exe "hi! cssURL"                    .s:fg_orange       .s:bg_none          .s:fmt_ital
-exe "hi! cssFunctionName"           .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! cssColor"                  .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssPseudoClassId"          .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssClassName"              .s:fg_green        .s:bg_none          .s:fmt_none
-exe "hi! cssValueLength"            .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssCommonAttr"             .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! cssBraces"                 .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! cssURL"                        .s:fg_orange       .s:bg_none          .s:fmt_ital
+exe "hi! cssFunctionName"               .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! cssColor"                      .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! cssPseudoClassId"              .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! cssClassName"                  .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! cssValueLength"                .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! cssCommonAttr"                 .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! cssBraces"                     .s:fg_none         .s:bg_none          .s:fmt_none
+
+" ruby
+exe "hi! rubyClass"                     .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! rubyFunction"                  .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! rubyInterpolationDelimiter"    .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! rubySymbol"                    .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! rubyStringDelimiter"           .s:fg_yellow       .s:bg_none          .s:fmt_none
+exe "hi! rubyBlockParameter"            .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! rubyInstanceVariable"          .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! rubyInclude"                   .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! rubyGlobalVariable"            .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexp"                    .s:fg_yellow       .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexpDelimiter"           .s:fg_yellow       .s:bg_none          .s:fmt_none
+exe "hi! rubyEscape"                    .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! rubyControl"                   .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! rubyClassVariable"             .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! rubyOperator"                  .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! rubyException"                 .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! rubyPseudoVariable"            .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsARAssociationMethod"  .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsARMethod"             .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsRenderMethod"         .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsMethod"               .s:fg_aqua         .s:bg_none          .s:fmt_none
+
+" eruby
+exe "hi! erubyDelimiter"                .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! erubyComment"                  .s:fg_comment      .s:bg_none          .s:fmt_none
+exe "hi! erubyRailsMethod"              .s:fg_aqua         .s:bg_none          .s:fmt_none
