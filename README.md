@@ -13,18 +13,18 @@ Install
 Usage
 ---------
 
+_Dream:_
+
+    colorscheme dream
+
 _Dream light:_
 
     colorscheme dream-light
 
-_Dream dark:_
-
-    colorscheme dream-dark
-
 Screenshots
 ---------
 
-_Dream dark:_
+_Dream:_
 
 ![dream-dark](./screenshots/dream-dark.png)
 
