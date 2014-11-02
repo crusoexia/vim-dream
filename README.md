@@ -26,6 +26,11 @@ Original dream-dark theme
 
 For the original _dream-dark_ user, please refer to [vim-dracula](https://github.com/crusoexia/vim-dracula)
 
+Javascript
+----------
+
+Works better with [vim-javascript](https://github.com/pangloss/vim-javascript), which provide features such as param syntax highlight.
+
 Screenshots
 -----------
 
