@@ -47,9 +47,9 @@ if has("gui_running")
   let s:changebg   = "#5F5F87"
 else
   let s:vmode      = "cterm"
-  let s:background = "234"
+  let s:background = "235"
   let s:foreground = "250"
-  let s:window     = "236"
+  let s:window     = "237"
   let s:line       = "235"
   let s:darkcolumn = "234"
   let s:selection  = "238"
@@ -143,14 +143,8 @@ exe "let s:fmt_revb      = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'
 " Highlighting 
 " ----------------
 
-" Use Xresources for background colour
-if has('gui_running')
-  exe "hi! Normal"        .s:fg_foreground  .s:bg_background  .s:fmt_none
-else
-  exe "hi! Normal"        .s:fg_foreground  .s:bg_none        .s:fmt_none
-endif
-
 " editor
+exe "hi! Normal"          .s:fg_foreground  .s:bg_background  .s:fmt_none
 exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
