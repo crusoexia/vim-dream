@@ -24,7 +24,7 @@ let colors_name = "dream"
 
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#353035"
+  let s:background = "#332e33"
   let s:foreground = "#D5D8D6"
   let s:window     = "#46484f"
   let s:line       = "#383A3E"
@@ -33,7 +33,7 @@ if has("gui_running")
   let s:comment    = "#808890"
   let s:error      = "#5F0000"
   
-  let s:pink       = "#EE5E91"
+  let s:pink       = "#dE6E81"
   let s:green      = "#9AD74C"
   let s:aqua       = "#6BB6C9"
   let s:yellow     = "#E7E582"
