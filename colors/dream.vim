@@ -246,10 +246,10 @@ exe "hi! vimCommand"                    .s:fg_pink         .s:bg_none          .
 exe "hi! javaScriptFunction"            .s:fg_aqua         .s:bg_none          .s:fmt_none
 exe "hi! javaScriptFuncName"            .s:fg_orange       .s:bg_none          .s:fmt_none
 exe "hi! javaScriptRailsFunction"       .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptBraces"              .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! javaScriptBraces"              .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! javaScriptArgument"            .s:fg_orange       .s:bg_none          .s:fmt_none
 exe "hi! jsFuncArgs"                    .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! jsThis"                        .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! jsThis"                        .s:fg_foreground   .s:bg_none          .s:fmt_bold
 
 " Html
 exe "hi! htmlTag"                       .s:fg_foreground   .s:bg_none          .s:fmt_none
