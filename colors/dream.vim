@@ -24,9 +24,9 @@ let colors_name = "dream"
 
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#292429"
+  let s:background = "#353035"
   let s:foreground = "#D5D8D6"
-  let s:window     = "#44464D"
+  let s:window     = "#46484f"
   let s:line       = "#383A3E"
   let s:darkcolumn = "#2F2C2F"
   let s:selection  = "#575B61"
@@ -35,7 +35,7 @@ if has("gui_running")
   
   let s:pink       = "#EE5E91"
   let s:green      = "#9AD74C"
-  let s:aqua       = "#3FB8CD"
+  let s:aqua       = "#6BB6C9"
   let s:yellow     = "#E7E582"
   let s:orange     = "#FBA44F"
   let s:red        = "#E73C50"
@@ -149,7 +149,7 @@ exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"    .s:fg_yellow      .s:bg_none        .s:fmt_bold
-exe "hi! VertSplit"       .s:fg_window      .s:bg_window      .s:fmt_none
+exe "hi! VertSplit"       .s:fg_background  .s:bg_window      .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! LineNr"          .s:fg_selection   .s:bg_none        .s:fmt_none
@@ -165,10 +165,10 @@ exe "hi! MoreMsg"         .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! ErrorMsg"        .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! WarningMsg"      .s:fg_red         .s:bg_none        .s:fmt_none
 
-" misc
+" tree and misc
 exe "hi! SpecialKey"      .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! Title"           .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! Directory"       .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Directory"       .s:fg_aqua        .s:bg_none        .s:fmt_bold
 
 " diff
 exe "hi! DiffAdd"         .s:fg_addfg       .s:bg_addbg       .s:fmt_none
@@ -195,10 +195,10 @@ exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 "exe "hi! Float"           .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Boolean"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "exe "hi! Character"       .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
 
 exe "hi! Identifier"      .s:fg_aqua        .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_green       .s:bg_none        .s:fmt_none
 
 exe "hi! Type"            .s:fg_aqua        .s:bg_none        .s:fmt_none
 exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
@@ -213,7 +213,7 @@ exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_bold
 "        Include"
 "        Define"
 "        Macro"
@@ -227,8 +227,8 @@ exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_none
 "        SpecialComment"
 "        Debug"
 
-exe "hi! Underlined"      .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Todo"            .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Underlined"      .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_none
 exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_error       .s:fmt_undr
@@ -244,7 +244,7 @@ exe "hi! vimCommand"                    .s:fg_pink         .s:bg_none          .
 
 " Javascript
 exe "hi! javaScriptFunction"            .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptFuncName"            .s:fg_yellow       .s:bg_none          .s:fmt_none
+exe "hi! javaScriptFuncName"            .s:fg_orange       .s:bg_none          .s:fmt_none
 exe "hi! javaScriptRailsFunction"       .s:fg_aqua         .s:bg_none          .s:fmt_none
 exe "hi! javaScriptBraces"              .s:fg_none         .s:bg_none          .s:fmt_none
 exe "hi! javaScriptArgument"            .s:fg_orange       .s:bg_none          .s:fmt_none
