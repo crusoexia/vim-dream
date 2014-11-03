@@ -24,21 +24,21 @@ let colors_name = "dream"
 
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#332e33"
+  let s:background = "#363636"
   let s:foreground = "#D5D8D6"
   let s:window     = "#46484f"
   let s:line       = "#383A3E"
-  let s:darkcolumn = "#2F2C2F"
+  let s:darkcolumn = "#343434"
   let s:selection  = "#575B61"
   let s:comment    = "#808890"
   let s:error      = "#5F0000"
   
   let s:pink       = "#dE6E81"
-  let s:green      = "#9AD74C"
+  let s:green      = "#65CE59"
   let s:aqua       = "#6BB6C9"
   let s:yellow     = "#c7c582"
-  let s:orange     = "#dB844F"
-  let s:red        = "#d73C40"
+  let s:orange     = "#CD7B50"
+  let s:red        = "#E64F62"
 
   let s:addfg      = "#D7FFAF"
   let s:addbg      = "#5F875F"
@@ -205,15 +205,15 @@ exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        StorageClass"
 "        Typedef"
 
-exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_bold
+exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Keyword"         .s:fg_pink        .s:bg_none        .s:fmt_bold
 exe "hi! Operator"        .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Conditional"
 "        Repeat"
-"        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        Include"
 "        Define"
 "        Macro"
@@ -255,7 +255,7 @@ exe "hi! jsThis"                        .s:fg_foreground   .s:bg_none          .
 exe "hi! htmlTag"                       .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! htmlEndTag"                    .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! htmlTagName"                   .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! htmlArg"                       .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! htmlArg"                       .s:fg_aqua         .s:bg_none          .s:fmt_none
 exe "hi! htmlSpecialChar"               .s:fg_red          .s:bg_none          .s:fmt_none
 
 " Xml
@@ -268,7 +268,7 @@ hi! link xmlAttrib  htmlArg
 exe "hi! cssURL"                        .s:fg_orange       .s:bg_none          .s:fmt_ital
 exe "hi! cssFunctionName"               .s:fg_aqua         .s:bg_none          .s:fmt_none
 exe "hi! cssColor"                      .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssPseudoClassId"              .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! cssPseudoClassId"              .s:fg_aqua         .s:bg_none          .s:fmt_none
 exe "hi! cssClassName"                  .s:fg_green        .s:bg_none          .s:fmt_none
 exe "hi! cssValueLength"                .s:fg_red          .s:bg_none          .s:fmt_none
 exe "hi! cssCommonAttr"                 .s:fg_pink         .s:bg_none          .s:fmt_none
