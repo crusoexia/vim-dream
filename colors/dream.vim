@@ -34,10 +34,10 @@ if has("gui_running")
   let s:error      = "#5F0000"
   
   let s:pink       = "#dE6E81"
-  let s:green      = "#65CE59"
+  let s:green      = "#9AD74C"
   let s:aqua       = "#6BB6C9"
   let s:yellow     = "#c7c582"
-  let s:orange     = "#CD7B50"
+  let s:orange     = "#D69E58"
   let s:red        = "#E64F62"
 
   let s:addfg      = "#D7FFAF"
