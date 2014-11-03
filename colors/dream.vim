@@ -36,9 +36,9 @@ if has("gui_running")
   let s:pink       = "#dE6E81"
   let s:green      = "#9AD74C"
   let s:aqua       = "#6BB6C9"
-  let s:yellow     = "#E7E582"
-  let s:orange     = "#FBA44F"
-  let s:red        = "#E73C50"
+  let s:yellow     = "#c7c582"
+  let s:orange     = "#dB844F"
+  let s:red        = "#d73C40"
 
   let s:addfg      = "#D7FFAF"
   let s:addbg      = "#5F875F"
@@ -205,7 +205,7 @@ exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        StorageClass"
 "        Typedef"
 
-exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_bold
 exe "hi! Operator"        .s:fg_pink        .s:bg_none        .s:fmt_none
 exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Conditional"
