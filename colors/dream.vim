@@ -40,11 +40,11 @@ if has("gui_running")
   let s:foreground = "#EAECEB"
   let s:window     = "#3E4E41"
   let s:line       = "#3E4044"
-  let s:lineNr     = "#676874"
+  let s:lineNr     = "#6C6D7A"
   let s:darkcolumn = "#2c2c2c"
   let s:selection  = "#575b61"
   let s:comment    = "#8D969F"
-  let s:error      = "#5f0000"
+  let s:error      = "#5F0000"
 
   let s:red        = "#DD5676"
   let s:orangered  = "#DB8C7E"
