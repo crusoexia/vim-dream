@@ -38,11 +38,12 @@ if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#38393F"
   let s:foreground = "#EAECEB"
-  let s:window     = "#505050"
-  let s:line       = "#383a3e"
+  let s:window     = "#3E4E41"
+  let s:line       = "#3E4044"
+  let s:lineNr     = "#676874"
   let s:darkcolumn = "#2c2c2c"
   let s:selection  = "#575b61"
-  let s:comment    = "#808890"
+  let s:comment    = "#8D969F"
   let s:error      = "#5f0000"
 
   let s:red        = "#DD5676"
@@ -63,6 +64,7 @@ else
   let s:foreground = "251"
   let s:window     = "238"
   let s:line       = "236"
+  let s:lineNr     = "236"
   let s:darkcolumn = "234"
   let s:selection  = "238"
   let s:comment    = "243"
@@ -103,6 +105,7 @@ exe "let s:bg_foreground = ' ".s:vmode."bg=".s:foreground."'"
 exe "let s:bg_background = ' ".s:vmode."bg=".s:background."'"
 exe "let s:bg_selection  = ' ".s:vmode."bg=".s:selection ."'"
 exe "let s:bg_line       = ' ".s:vmode."bg=".s:line      ."'"
+exe "let s:bg_lineNr     = ' ".s:vmode."bg=".s:lineNr    ."'"
 exe "let s:bg_comment    = ' ".s:vmode."bg=".s:comment   ."'"
 exe "let s:bg_red        = ' ".s:vmode."bg=".s:red       ."'"
 exe "let s:bg_orangered  = ' ".s:vmode."bg=".s:orangered ."'"
@@ -124,6 +127,7 @@ exe "let s:fg_foreground = ' ".s:vmode."fg=".s:foreground."'"
 exe "let s:fg_background = ' ".s:vmode."fg=".s:background."'"
 exe "let s:fg_selection  = ' ".s:vmode."fg=".s:selection ."'"
 exe "let s:fg_line       = ' ".s:vmode."fg=".s:line      ."'"
+exe "let s:fg_lineNr     = ' ".s:vmode."fg=".s:lineNr    ."'"
 exe "let s:fg_comment    = ' ".s:vmode."fg=".s:comment   ."'"
 exe "let s:fg_red        = ' ".s:vmode."fg=".s:red       ."'"
 exe "let s:fg_orangered  = ' ".s:vmode."fg=".s:orangered ."'"
@@ -161,10 +165,10 @@ exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
-exe "hi! VertSplit"       .s:fg_window      .s:bg_none        .s:fmt_none
+exe "hi! VertSplit"       .s:fg_green       .s:bg_window      .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
-exe "hi! LineNr"          .s:fg_selection   .s:bg_none        .s:fmt_none
+exe "hi! LineNr"          .s:fg_lineNr      .s:bg_none        .s:fmt_none
 exe "hi! StatusLine"      .s:fg_comment     .s:bg_background  .s:fmt_revr
 exe "hi! StatusLineNC"    .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
@@ -234,9 +238,9 @@ exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "        SpecialComment"
 "        Debug"
 
-exe "hi! Underlined"      .s:fg_orangered   .s:bg_none        .s:fmt_none
-exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
-exe "hi! Error"           .s:fg_red         .s:bg_error       .s:fmt_undr
+exe "hi! Underlined"          .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! Ignore"              .s:fg_none        .s:bg_none        .s:fmt_none
+exe "hi! Error"               .s:fg_red         .s:bg_error       .s:fmt_undr
 
 if g:dream_italic == 1
     exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_ital
