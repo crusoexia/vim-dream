@@ -34,11 +34,11 @@ if has("gui_running")
   let s:error      = "#5F0000"
   
   let s:pink       = "#DD5676"
-  let s:green      = "#9AD74C"
+  let s:green      = "#DB8C7E"
   let s:aqua       = "#CAFCD8"
   let s:yellow     = "#c7c582"
-  let s:orange     = "#D69E58"
-  let s:red        = "#E64F62"
+  let s:orange     = "#D18B37"
+  let s:red        = "#D37ED8"
 
   let s:addfg      = "#D7FFAF"
   let s:addbg      = "#5F875F"
@@ -193,11 +193,11 @@ exe "hi! PmenuSel"        .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
 "exe "hi! Number"          .s:fg_red         .s:bg_none        .s:fmt_none
 "exe "hi! Float"           .s:fg_red         .s:bg_none        .s:fmt_none
-exe "hi! Boolean"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+"exe "hi! Boolean"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "exe "hi! Character"       .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
 
-exe "hi! Identifier"      .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_green        .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_green       .s:bg_none        .s:fmt_none
 
 exe "hi! Type"            .s:fg_aqua        .s:bg_none        .s:fmt_none
@@ -213,13 +213,13 @@ exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
 "        Repeat"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_bold
 "        Include"
 "        Define"
 "        Macro"
 "        PreCondit"
 
-exe "hi! Special"         .s:fg_pink        .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        SpecialKey
 "        SpecialChar"
 "        Tag"
@@ -249,7 +249,7 @@ exe "hi! javaScriptRailsFunction"       .s:fg_aqua         .s:bg_none          .
 exe "hi! javaScriptBraces"              .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! javaScriptArgument"            .s:fg_orange       .s:bg_none          .s:fmt_none
 exe "hi! jsFuncArgs"                    .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! jsThis"                        .s:fg_foreground   .s:bg_none          .s:fmt_bold
+exe "hi! jsThis"                        .s:fg_aqua   .s:bg_none          .s:fmt_none
 
 " Html
 exe "hi! htmlTag"                       .s:fg_foreground   .s:bg_none          .s:fmt_none
