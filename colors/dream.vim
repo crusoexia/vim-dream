@@ -62,20 +62,20 @@ else
   let s:vmode      = "cterm"
   let s:background = "235"
   let s:foreground = "251"
-  let s:window     = "238"
+  let s:window     = "236"
   let s:line       = "236"
-  let s:lineNr     = "236"
+  let s:lineNr     = "239"
   let s:darkcolumn = "234"
-  let s:selection  = "238"
+  let s:selection  = "237"
   let s:comment    = "243"
   let s:error      = "52"
   
-  let s:red        = ""
-  let s:orangered  = ""
-  let s:orange     = ""
-  let s:green      = ""
-  let s:grassgreen = ""
-  let s:purple     = ""
+  let s:red        = "161"
+  let s:orangered  = "131"
+  let s:orange     = "130"
+  let s:green      = "157"
+  let s:grassgreen = "143"
+  let s:purple     = "98"
   
   let s:addfg      = "193"
   let s:addbg      = "65"
@@ -173,8 +173,8 @@ exe "hi! StatusLine"      .s:fg_comment     .s:bg_background  .s:fmt_revr
 exe "hi! StatusLineNC"    .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Visual"          .s:fg_none        .s:bg_selection   .s:fmt_none
-exe "hi! Search"          .s:fg_background  .s:bg_yellow      .s:fmt_none
-exe "hi! MatchParen"      .s:fg_background  .s:bg_aqua        .s:fmt_none
+exe "hi! Search"          .s:fg_background  .s:bg_grassgreen  .s:fmt_none
+exe "hi! MatchParen"      .s:fg_background  .s:bg_green       .s:fmt_none
 exe "hi! Question"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! ModeMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
@@ -190,7 +190,7 @@ exe "hi! Directory"       .s:fg_green       .s:bg_none        .s:fmt_bold
 exe "hi! DiffAdd"         .s:fg_addfg       .s:bg_addbg       .s:fmt_none
 exe "hi! DiffDelete"      .s:fg_background  .s:bg_delbg       .s:fmt_none
 exe "hi! DiffChange"      .s:fg_changefg    .s:bg_changebg    .s:fmt_none
-exe "hi! DiffText"        .s:fg_background  .s:bg_aqua        .s:fmt_none
+exe "hi! DiffText"        .s:fg_background  .s:bg_green       .s:fmt_none
 
 " fold
 exe "hi! Folded"          .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
