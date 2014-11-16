@@ -2,12 +2,24 @@
 " Maintainer: Crusoe Xia (crusoexia)
 " URL:        https://github.com/crusoexia/vim-dream
 " License:    MIT
+"
+" The code is learnt from hybrid.
+"
+" Configuration:
+"
+"   * Enable italic:
+"
+"       let g:dream_italic = 1
 
 " Initialisation
 " --------------
 
 if !has("gui_running") && &t_Co < 256
   finish
+endif
+
+if ! exists("g:dream_italic")
+    let g:dream_italic = 0
 endif
 
 set background=dark
@@ -25,44 +37,44 @@ let colors_name = "dream"
 if has("gui_running")
   let s:vmode      = "gui"
   let s:background = "#38393F"
-  let s:foreground = "#eAeCeB"
-  let s:window     = "#46484f"
-  let s:line       = "#383A3E"
-  let s:darkcolumn = "#343434"
-  let s:selection  = "#575B61"
+  let s:foreground = "#EAECEB"
+  let s:window     = "#505050"
+  let s:line       = "#383a3e"
+  let s:darkcolumn = "#2c2c2c"
+  let s:selection  = "#575b61"
   let s:comment    = "#808890"
-  let s:error      = "#5F0000"
-  
-  let s:pink       = "#DD5676"
-  let s:green      = "#DB8C7E"
-  let s:aqua       = "#CAFCD8"
-  let s:yellow     = "#c7c582"
-  let s:orange     = "#D18B37"
-  let s:red        = "#D37ED8"
+  let s:error      = "#5f0000"
 
-  let s:addfg      = "#D7FFAF"
-  let s:addbg      = "#5F875F"
-  let s:delbg      = "#F75F5F"
-  let s:changefg   = "#D7D7FF"
-  let s:changebg   = "#5F5F87"
+  let s:red        = "#DD5676"
+  let s:orangered  = "#DB8C7E"
+  let s:orange     = "#D18B37"
+  let s:green      = "#C2F2CE"
+  let s:grassgreen = "#C7C582"
+  let s:purple     = "#D37ED8"
+  
+  let s:addfg      = "#d7ffaf"
+  let s:addbg      = "#5f875f"
+  let s:delbg      = "#f75f5f"
+  let s:changefg   = "#d7d7ff"
+  let s:changebg   = "#5f5f87"
 else
   let s:vmode      = "cterm"
   let s:background = "235"
-  let s:foreground = "250"
-  let s:window     = "237"
-  let s:line       = "235"
+  let s:foreground = "251"
+  let s:window     = "238"
+  let s:line       = "236"
   let s:darkcolumn = "234"
   let s:selection  = "238"
   let s:comment    = "243"
   let s:error      = "52"
   
-  let s:pink       = "197"
-  let s:green      = "148"
-  let s:aqua       = "81"
-  let s:yellow     = "186"
-  let s:orange     = "208"
-  let s:red        = "196"
-
+  let s:red        = ""
+  let s:orangered  = ""
+  let s:orange     = ""
+  let s:green      = ""
+  let s:grassgreen = ""
+  let s:purple     = ""
+  
   let s:addfg      = "193"
   let s:addbg      = "65"
   let s:delbg      = "167"
@@ -93,11 +105,11 @@ exe "let s:bg_selection  = ' ".s:vmode."bg=".s:selection ."'"
 exe "let s:bg_line       = ' ".s:vmode."bg=".s:line      ."'"
 exe "let s:bg_comment    = ' ".s:vmode."bg=".s:comment   ."'"
 exe "let s:bg_red        = ' ".s:vmode."bg=".s:red       ."'"
+exe "let s:bg_orangered  = ' ".s:vmode."bg=".s:orangered ."'"
 exe "let s:bg_orange     = ' ".s:vmode."bg=".s:orange    ."'"
-exe "let s:bg_yellow     = ' ".s:vmode."bg=".s:yellow    ."'"
 exe "let s:bg_green      = ' ".s:vmode."bg=".s:green     ."'"
-exe "let s:bg_aqua       = ' ".s:vmode."bg=".s:aqua      ."'"
-exe "let s:bg_pink       = ' ".s:vmode."bg=".s:pink      ."'"
+exe "let s:bg_grassgreen = ' ".s:vmode."bg=".s:grassgreen."'"
+exe "let s:bg_purple     = ' ".s:vmode."bg=".s:purple    ."'"
 exe "let s:bg_window     = ' ".s:vmode."bg=".s:window    ."'"
 exe "let s:bg_darkcolumn = ' ".s:vmode."bg=".s:darkcolumn."'"
 exe "let s:bg_addbg      = ' ".s:vmode."bg=".s:addbg     ."'"
@@ -114,11 +126,11 @@ exe "let s:fg_selection  = ' ".s:vmode."fg=".s:selection ."'"
 exe "let s:fg_line       = ' ".s:vmode."fg=".s:line      ."'"
 exe "let s:fg_comment    = ' ".s:vmode."fg=".s:comment   ."'"
 exe "let s:fg_red        = ' ".s:vmode."fg=".s:red       ."'"
+exe "let s:fg_orangered  = ' ".s:vmode."fg=".s:orangered ."'"
 exe "let s:fg_orange     = ' ".s:vmode."fg=".s:orange    ."'"
-exe "let s:fg_yellow     = ' ".s:vmode."fg=".s:yellow    ."'"
 exe "let s:fg_green      = ' ".s:vmode."fg=".s:green     ."'"
-exe "let s:fg_aqua       = ' ".s:vmode."fg=".s:aqua      ."'"
-exe "let s:fg_pink       = ' ".s:vmode."fg=".s:pink      ."'"
+exe "let s:fg_grassgreen = ' ".s:vmode."fg=".s:grassgreen."'"
+exe "let s:fg_purple     = ' ".s:vmode."fg=".s:purple    ."'"
 exe "let s:fg_window     = ' ".s:vmode."fg=".s:window    ."'"
 exe "let s:fg_darkcolumn = ' ".s:vmode."fg=".s:darkcolumn."'"
 exe "let s:fg_addbg      = ' ".s:vmode."fg=".s:addbg     ."'"
@@ -130,10 +142,10 @@ exe "let s:fg_error      = ' ".s:vmode."fg=".s:error     ."'"
 
 exe "let s:fmt_none      = ' ".s:vmode."=NONE".          " term=NONE"        ."'"
 exe "let s:fmt_bold      = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b    ."'"
-exe "let s:fmt_bldi      = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b    ."'"
+exe "let s:fmt_bldi      = ' ".s:vmode."=NONE".s:b.s:i.  " term=NONE".s:b.s:i."'"
 exe "let s:fmt_undr      = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u    ."'"
 exe "let s:fmt_undb      = ' ".s:vmode."=NONE".s:u.s:b.  " term=NONE".s:u.s:b."'"
-exe "let s:fmt_undi      = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u    ."'"
+exe "let s:fmt_undi      = ' ".s:vmode."=NONE".s:u.s:i.  " term=NONE".s:u.s:i."'"
 exe "let s:fmt_curl      = ' ".s:vmode."=NONE".s:c.      " term=NONE".s:c    ."'"
 exe "let s:fmt_ital      = ' ".s:vmode."=NONE".s:i.      " term=NONE".s:i    ."'"
 exe "let s:fmt_stnd      = ' ".s:vmode."=NONE".s:s.      " term=NONE".s:s    ."'"
@@ -141,15 +153,15 @@ exe "let s:fmt_revr      = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r    ."'
 exe "let s:fmt_revb      = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
 
 " Highlighting 
-" ----------------
+" ------------
 
 " editor
 exe "hi! Normal"          .s:fg_foreground  .s:bg_background  .s:fmt_none
 exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLineNr"    .s:fg_yellow      .s:bg_none        .s:fmt_bold
-exe "hi! VertSplit"       .s:fg_background  .s:bg_window      .s:fmt_none
+exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
+exe "hi! VertSplit"       .s:fg_window      .s:bg_none        .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! LineNr"          .s:fg_selection   .s:bg_none        .s:fmt_none
@@ -159,16 +171,16 @@ exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Visual"          .s:fg_none        .s:bg_selection   .s:fmt_none
 exe "hi! Search"          .s:fg_background  .s:bg_yellow      .s:fmt_none
 exe "hi! MatchParen"      .s:fg_background  .s:bg_aqua        .s:fmt_none
-exe "hi! Question"        .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! ModeMsg"         .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! MoreMsg"         .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Question"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! ModeMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! MoreMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! ErrorMsg"        .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! WarningMsg"      .s:fg_red         .s:bg_none        .s:fmt_none
 
-" tree and misc
+" misc
 exe "hi! SpecialKey"      .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! Title"           .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! Directory"       .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! Title"           .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Directory"       .s:fg_green       .s:bg_none        .s:fmt_bold
 
 " diff
 exe "hi! DiffAdd"         .s:fg_addfg       .s:bg_addbg       .s:fmt_none
@@ -190,36 +202,31 @@ exe "hi! PmenuSel"        .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 " Generic Syntax Highlighting
 " ---------------------------
 
-exe "hi! Constant"        .s:fg_red         .s:bg_none        .s:fmt_none
-"exe "hi! Number"          .s:fg_red         .s:bg_none        .s:fmt_none
-"exe "hi! Float"           .s:fg_red         .s:bg_none        .s:fmt_none
-"exe "hi! Boolean"         .s:fg_aqua        .s:bg_none        .s:fmt_none
-"exe "hi! Character"       .s:fg_yellow      .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Constant"        .s:fg_purple      .s:bg_none        .s:fmt_none
+exe "hi! Number"          .s:fg_purple      .s:bg_none        .s:fmt_none
+exe "hi! Float"           .s:fg_purple      .s:bg_none        .s:fmt_none
+exe "hi! Boolean"         .s:fg_purple      .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Character"       .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 
-exe "hi! Identifier"      .s:fg_green        .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_orangered   .s:bg_none        .s:fmt_none
 
-exe "hi! Type"            .s:fg_aqua        .s:bg_none        .s:fmt_none
-exe "hi! Structure"       .s:fg_aqua        .s:bg_none        .s:fmt_none
-"        StorageClass"
-"        Typedef"
-
-exe "hi! Statement"       .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Keyword"         .s:fg_pink        .s:bg_none        .s:fmt_bold
-exe "hi! Operator"        .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Label"           .s:fg_yellow      .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Operator"        .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! Label"           .s:fg_orange      .s:bg_none        .s:fmt_none
 "        Conditional"
 "        Repeat"
+"        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_aqua        .s:bg_none        .s:fmt_bold
+exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_none
 "        Include"
 "        Define"
 "        Macro"
 "        PreCondit"
 
-exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "        SpecialKey
 "        SpecialChar"
 "        Tag"
@@ -227,36 +234,51 @@ exe "hi! Special"         .s:fg_aqua        .s:bg_none        .s:fmt_none
 "        SpecialComment"
 "        Debug"
 
-exe "hi! Underlined"      .s:fg_pink        .s:bg_none        .s:fmt_none
-exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_none
-exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
+exe "hi! Underlined"      .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"           .s:fg_red         .s:bg_error       .s:fmt_undr
 
-" Quickfix window highlighting
-exe "hi! qfLineNr"        .s:fg_yellow      .s:bg_none        .s:fmt_none
+if g:dream_italic == 1
+    exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_ital
+    "        Structure"
+    "        StorageClass"
+    "        Typedef"
+    
+    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_ital
+    exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_ital
+else
+    exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
+    "        Structure"
+    "        StorageClass"
+    "        Typedef"
+    
+    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_none
+    exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
+endif
 
 " Language highlight
 " ------------------
 
 " Vim command
-exe "hi! vimCommand"                    .s:fg_pink         .s:bg_none          .s:fmt_none
+exe "hi! vimCommand"                .s:fg_red          .s:bg_none          .s:fmt_none
 
 " Javascript
-exe "hi! javaScriptFunction"            .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptFuncName"            .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! javaScriptRailsFunction"       .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! javaScriptBraces"              .s:fg_foreground   .s:bg_none          .s:fmt_none
-exe "hi! javaScriptArgument"            .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! jsFuncArgs"                    .s:fg_orange       .s:bg_none          .s:fmt_none
-exe "hi! jsThis"                        .s:fg_aqua   .s:bg_none          .s:fmt_none
+exe "hi! jsFuncName"                .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! jsThis"                    .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! jsFuncCall"                .s:fg_none         .s:bg_none          .s:fmt_none
+
+if g:dream_italic == 1
+    exe "hi! jsFuncArgs"            .s:fg_orange       .s:bg_none          .s:fmt_ital
+else
+    exe "hi! jsFuncArgs"            .s:fg_orange       .s:bg_none          .s:fmt_none
+endif
 
 " Html
-exe "hi! htmlTag"                       .s:fg_foreground   .s:bg_none          .s:fmt_none
-exe "hi! htmlEndTag"                    .s:fg_foreground   .s:bg_none          .s:fmt_none
-exe "hi! htmlTagName"                   .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! htmlArg"                       .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! htmlSpecialChar"               .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! htmlTag"                   .s:fg_foreground   .s:bg_none          .s:fmt_none
+exe "hi! htmlEndTag"                .s:fg_foreground   .s:bg_none          .s:fmt_none
+exe "hi! htmlTagName"               .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! htmlArg"                   .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! htmlSpecialChar"           .s:fg_purple       .s:bg_none          .s:fmt_none
 
 " Xml
 hi! link xmlTag     htmlTag
@@ -265,39 +287,53 @@ hi! link xmlTagName htmlTagName
 hi! link xmlAttrib  htmlArg
 
 " CSS
-exe "hi! cssURL"                        .s:fg_orange       .s:bg_none          .s:fmt_ital
-exe "hi! cssFunctionName"               .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! cssColor"                      .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssPseudoClassId"              .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! cssClassName"                  .s:fg_green        .s:bg_none          .s:fmt_none
-exe "hi! cssValueLength"                .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! cssCommonAttr"                 .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! cssBraces"                     .s:fg_none         .s:bg_none          .s:fmt_none
+exe "hi! cssFunctionName"           .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! cssColor"                  .s:fg_purple       .s:bg_none          .s:fmt_none
+exe "hi! cssPseudoClassId"          .s:fg_purple       .s:bg_none          .s:fmt_none
+exe "hi! cssClassName"              .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! cssValueLength"            .s:fg_purple       .s:bg_none          .s:fmt_none
+exe "hi! cssCommonAttr"             .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! cssBraces"                 .s:fg_none         .s:bg_none          .s:fmt_none
+
+if g:dream_italic == 1
+    exe "hi! cssURL"                .s:fg_orange       .s:bg_none          .s:fmt_undi
+else
+    exe "hi! cssURL"                .s:fg_orange       .s:bg_none          .s:fmt_undr
+endif
 
 " ruby
-exe "hi! rubyClass"                     .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! rubyFunction"                  .s:fg_green        .s:bg_none          .s:fmt_none
 exe "hi! rubyInterpolationDelimiter"    .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! rubySymbol"                    .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! rubyStringDelimiter"           .s:fg_yellow       .s:bg_none          .s:fmt_none
-exe "hi! rubyBlockParameter"            .s:fg_orange       .s:bg_none          .s:fmt_none
 exe "hi! rubyInstanceVariable"          .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! rubyInclude"                   .s:fg_pink         .s:bg_none          .s:fmt_none
 exe "hi! rubyGlobalVariable"            .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexp"                    .s:fg_yellow       .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexpDelimiter"           .s:fg_yellow       .s:bg_none          .s:fmt_none
-exe "hi! rubyEscape"                    .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! rubyControl"                   .s:fg_pink         .s:bg_none          .s:fmt_none
 exe "hi! rubyClassVariable"             .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! rubyOperator"                  .s:fg_pink         .s:bg_none          .s:fmt_none
-exe "hi! rubyException"                 .s:fg_pink         .s:bg_none          .s:fmt_none
 exe "hi! rubyPseudoVariable"            .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! rubyRailsARAssociationMethod"  .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! rubyRailsARMethod"             .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! rubyRailsRenderMethod"         .s:fg_aqua         .s:bg_none          .s:fmt_none
-exe "hi! rubyRailsMethod"               .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! rubyOperator"                  .s:fg_red          .s:bg_none          .s:fmt_none
+exe "hi! rubyFunction"                  .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! rubyInclude"                   .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! rubyStringDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexp"                    .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexpDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubySymbol"                    .s:fg_purple       .s:bg_none          .s:fmt_none
+exe "hi! rubyEscape"                    .s:fg_purple       .s:bg_none          .s:fmt_none
+exe "hi! rubyControl"                   .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! rubyClass"                     .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! rubyDefine"                    .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! rubyException"                 .s:fg_green        .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsARAssociationMethod"  .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsARMethod"             .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsRenderMethod"         .s:fg_orange       .s:bg_none          .s:fmt_none
+exe "hi! rubyRailsMethod"               .s:fg_orange       .s:bg_none          .s:fmt_none
+
+if g:dream_italic == 1
+    exe "hi! rubyBlockParameter"        .s:fg_orange       .s:bg_none          .s:fmt_ital
+    exe "hi! rubyConstant"              .s:fg_orange       .s:bg_none          .s:fmt_ital
+    exe "hi! rubyIdentifier"            .s:fg_orange       .s:bg_none          .s:fmt_ital
+else
+    exe "hi! rubyBlockParameter"        .s:fg_orange       .s:bg_none          .s:fmt_none
+    exe "hi! rubyConstant"              .s:fg_orange       .s:bg_none          .s:fmt_none
+    exe "hi! rubyIdentifier"            .s:fg_orange       .s:bg_none          .s:fmt_none
+endif
 
 " eruby
 exe "hi! erubyDelimiter"                .s:fg_none         .s:bg_none          .s:fmt_none
-exe "hi! erubyComment"                  .s:fg_comment      .s:bg_none          .s:fmt_none
-exe "hi! erubyRailsMethod"              .s:fg_aqua         .s:bg_none          .s:fmt_none
+exe "hi! erubyRailsMethod"              .s:fg_green        .s:bg_none          .s:fmt_none
