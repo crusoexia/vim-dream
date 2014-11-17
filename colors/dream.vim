@@ -62,7 +62,7 @@ else
   let s:vmode      = "cterm"
   let s:background = "235"
   let s:foreground = "251"
-  let s:window     = "236"
+  let s:window     = "234"
   let s:line       = "236"
   let s:lineNr     = "239"
   let s:darkcolumn = "234"
@@ -206,8 +206,11 @@ exe "hi! PmenuSel"        .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 " Generic Syntax Highlighting
 " ---------------------------
 
-" TODO: italic Constant
-exe "hi! Constant"        .s:fg_purple      .s:bg_none        .s:fmt_none
+if g:dream_italic == 1
+    exe "hi! Constant"    .s:fg_purple      .s:bg_none        .s:fmt_ital
+else
+    exe "hi! Constant"    .s:fg_purple      .s:bg_none        .s:fmt_none
+endif
 exe "hi! Number"          .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Float"           .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Boolean"         .s:fg_purple      .s:bg_none        .s:fmt_none
@@ -216,6 +219,11 @@ exe "hi! Character"       .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 
 exe "hi! Identifier"      .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_orangered   .s:bg_none        .s:fmt_none
+
+exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_bold
+"        Structure"
+"        StorageClass"
+"        Typedef"
 
 exe "hi! Statement"       .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_red         .s:bg_none        .s:fmt_none
@@ -226,10 +234,10 @@ exe "hi! Conditional"     .s:fg_red         .s:bg_none        .s:fmt_bold
 "        Exception"
 
 exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_none
-"        Include"
-"        Define"
-"        Macro"
-"        PreCondit"
+exe "hi! Include"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! Define"          .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! Macro"           .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! PreCondit"       .s:fg_orangered   .s:bg_none        .s:fmt_bold
 
 exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "        SpecialKey
@@ -244,20 +252,10 @@ exe "hi! Ignore"              .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"               .s:fg_red         .s:bg_error       .s:fmt_undr
 
 if g:dream_italic == 1
-    exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_ital
-    "        Structure"
-    "        StorageClass"
-    "        Typedef"
-    
-    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_ital
+    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_bldi
     exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_ital
 else
-    exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_none
-    "        Structure"
-    "        StorageClass"
-    "        Typedef"
-    
-    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_none
+    exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_bold
     exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 endif
 
