@@ -48,7 +48,7 @@ if has("gui_running")
 
   let s:red        = "#DD5676"
   let s:orangered  = "#DB8C7E"
-  let s:orange     = "#D18B37"
+  let s:orange     = "#D0A12D"
   let s:green      = "#B8E6C4"
   let s:grassgreen = "#C7C582"
   let s:purple     = "#BC71C0"
