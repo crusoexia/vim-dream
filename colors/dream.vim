@@ -36,7 +36,7 @@ let colors_name = "dream"
 
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#2E2E33"
+  let s:background = "#2A2B30"
   let s:foreground = "#EAECEB"
   let s:window     = "#3E4E41"
   let s:line       = "#3E4044"
@@ -165,7 +165,7 @@ exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
-exe "hi! VertSplit"       .s:fg_green       .s:bg_window      .s:fmt_none
+exe "hi! VertSplit"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! LineNr"          .s:fg_lineNr      .s:bg_none        .s:fmt_none
