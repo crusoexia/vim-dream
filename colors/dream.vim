@@ -70,8 +70,8 @@ else
   let s:comment    = "243"
   let s:error      = "52"
   
-  let s:red        = "161"
-  let s:orangered  = "131"
+  let s:red        = "197"
+  let s:orangered  = "167"
   let s:orange     = "130"
   let s:green      = "157"
   let s:grassgreen = "143"
