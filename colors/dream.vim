@@ -50,7 +50,8 @@ if has("gui_running")
   let s:orangered  = "#DB8C7E"
   let s:orange     = "#D0A12D"
   let s:green      = "#A8E6B7"
-  let s:grassgreen = "#C7C582"
+  let s:darkgreen  = "#C7C582"
+  let s:grassgreen = "#C2D23A"
   let s:purple     = "#BC71C0"
   
   let s:addfg      = "#d7ffaf"
@@ -74,6 +75,7 @@ else
   let s:orangered  = "167"
   let s:orange     = "130"
   let s:green      = "157"
+  let s:darkgreen  = "143"
   let s:grassgreen = "143"
   let s:purple     = "98"
   
@@ -112,6 +114,7 @@ exe "let s:bg_orangered  = ' ".s:vmode."bg=".s:orangered ."'"
 exe "let s:bg_orange     = ' ".s:vmode."bg=".s:orange    ."'"
 exe "let s:bg_green      = ' ".s:vmode."bg=".s:green     ."'"
 exe "let s:bg_grassgreen = ' ".s:vmode."bg=".s:grassgreen."'"
+exe "let s:bg_darkgreen  = ' ".s:vmode."bg=".s:darkgreen ."'"
 exe "let s:bg_purple     = ' ".s:vmode."bg=".s:purple    ."'"
 exe "let s:bg_window     = ' ".s:vmode."bg=".s:window    ."'"
 exe "let s:bg_darkcolumn = ' ".s:vmode."bg=".s:darkcolumn."'"
@@ -134,6 +137,7 @@ exe "let s:fg_orangered  = ' ".s:vmode."fg=".s:orangered ."'"
 exe "let s:fg_orange     = ' ".s:vmode."fg=".s:orange    ."'"
 exe "let s:fg_green      = ' ".s:vmode."fg=".s:green     ."'"
 exe "let s:fg_grassgreen = ' ".s:vmode."fg=".s:grassgreen."'"
+exe "let s:fg_darkgreen  = ' ".s:vmode."fg=".s:darkgreen ."'"
 exe "let s:fg_purple     = ' ".s:vmode."fg=".s:purple    ."'"
 exe "let s:fg_window     = ' ".s:vmode."fg=".s:window    ."'"
 exe "let s:fg_darkcolumn = ' ".s:vmode."fg=".s:darkcolumn."'"
@@ -164,7 +168,7 @@ exe "hi! Normal"          .s:fg_foreground  .s:bg_background  .s:fmt_none
 exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
+exe "hi! CursorLineNr"    .s:fg_darkgreen  .s:bg_none        .s:fmt_bold
 exe "hi! VertSplit"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
@@ -175,15 +179,15 @@ exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Visual"          .s:fg_none        .s:bg_selection   .s:fmt_none
 exe "hi! Search"          .s:fg_background  .s:bg_grassgreen  .s:fmt_none
 exe "hi! MatchParen"      .s:fg_background  .s:bg_green       .s:fmt_none
-exe "hi! Question"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! ModeMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! MoreMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Question"        .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! ModeMsg"         .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! MoreMsg"         .s:fg_darkgreen   .s:bg_none        .s:fmt_none
 exe "hi! ErrorMsg"        .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! WarningMsg"      .s:fg_red         .s:bg_none        .s:fmt_none
 
 " misc
 exe "hi! SpecialKey"      .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! Title"           .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Title"           .s:fg_darkgreen   .s:bg_none        .s:fmt_none
 exe "hi! Directory"       .s:fg_green       .s:bg_none        .s:fmt_bold
 
 " diff
@@ -214,8 +218,8 @@ endif
 exe "hi! Number"          .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Float"           .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Boolean"         .s:fg_purple      .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! Character"       .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! Character"       .s:fg_darkgreen   .s:bg_none        .s:fmt_none
 
 exe "hi! Identifier"      .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_orangered   .s:bg_none        .s:fmt_none
@@ -233,11 +237,11 @@ exe "hi! Conditional"     .s:fg_red         .s:bg_none        .s:fmt_bold
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Include"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Define"          .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Macro"           .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! PreCondit"       .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! PreProc"         .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
+"        Include"
+"        Define"
+"        Macro"
+"        PreCondit"
 
 exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "        SpecialKey
@@ -262,8 +266,8 @@ endif
 " NerdTree
 " --------
 
-exe "hi! NERDTreeOpenable"    .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! NERDTreeClosable"    .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeOpenable"    .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeClosable"    .s:fg_darkgreen   .s:bg_none        .s:fmt_none
 
 " Language highlight
 " ------------------
@@ -319,9 +323,9 @@ exe "hi! rubyPseudoVariable"            .s:fg_none         .s:bg_none          .
 exe "hi! rubyOperator"                  .s:fg_red          .s:bg_none          .s:fmt_none
 exe "hi! rubyFunction"                  .s:fg_orangered    .s:bg_none          .s:fmt_none
 exe "hi! rubyInclude"                   .s:fg_orangered    .s:bg_none          .s:fmt_none
-exe "hi! rubyStringDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexp"                    .s:fg_grassgreen   .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexpDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyStringDelimiter"           .s:fg_darkgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexp"                    .s:fg_darkgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexpDelimiter"           .s:fg_darkgreen   .s:bg_none          .s:fmt_none
 exe "hi! rubySymbol"                    .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! rubyEscape"                    .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! rubyControl"                   .s:fg_green        .s:bg_none          .s:fmt_none
