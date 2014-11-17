@@ -164,7 +164,7 @@ exe "hi! Normal"          .s:fg_foreground  .s:bg_background  .s:fmt_none
 exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLineNr"    .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
 exe "hi! VertSplit"       .s:fg_green       .s:bg_window      .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
