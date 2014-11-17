@@ -36,7 +36,7 @@ let colors_name = "dream"
 
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#38393F"
+  let s:background = "#323238"
   let s:foreground = "#EAECEB"
   let s:window     = "#3E4E41"
   let s:line       = "#3E4044"
@@ -233,7 +233,7 @@ exe "hi! Conditional"     .s:fg_red         .s:bg_none        .s:fmt_bold
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
 exe "hi! Include"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
 exe "hi! Define"          .s:fg_orangered   .s:bg_none        .s:fmt_bold
 exe "hi! Macro"           .s:fg_orangered   .s:bg_none        .s:fmt_bold
