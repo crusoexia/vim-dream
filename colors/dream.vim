@@ -76,7 +76,7 @@ else
   let s:orange     = "130"
   let s:green      = "157"
   let s:darkgreen  = "143"
-  let s:grassgreen = "143"
+  let s:grassgreen = "148"
   let s:purple     = "98"
   
   let s:addfg      = "193"
