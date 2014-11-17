@@ -164,7 +164,7 @@ exe "hi! Normal"          .s:fg_foreground  .s:bg_background  .s:fmt_none
 exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
+exe "hi! CursorLineNr"    .s:fg_orangered   .s:bg_none        .s:fmt_bold
 exe "hi! VertSplit"       .s:fg_green       .s:bg_window      .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
@@ -175,15 +175,15 @@ exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Visual"          .s:fg_none        .s:bg_selection   .s:fmt_none
 exe "hi! Search"          .s:fg_background  .s:bg_grassgreen  .s:fmt_none
 exe "hi! MatchParen"      .s:fg_background  .s:bg_green       .s:fmt_none
-exe "hi! Question"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! ModeMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! MoreMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Question"        .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! ModeMsg"         .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! MoreMsg"         .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! ErrorMsg"        .s:fg_background  .s:bg_red         .s:fmt_stnd
 exe "hi! WarningMsg"      .s:fg_red         .s:bg_none        .s:fmt_none
 
 " misc
 exe "hi! SpecialKey"      .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! Title"           .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Title"           .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Directory"       .s:fg_green       .s:bg_none        .s:fmt_bold
 
 " diff
@@ -214,11 +214,11 @@ endif
 exe "hi! Number"          .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Float"           .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Boolean"         .s:fg_purple      .s:bg_none        .s:fmt_none
-exe "hi! String"          .s:fg_grassgreen  .s:bg_none        .s:fmt_none
-exe "hi! Character"       .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! String"          .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! Character"       .s:fg_orangered   .s:bg_none        .s:fmt_none
 
-exe "hi! Identifier"      .s:fg_orangered   .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 
 exe "hi! Type"            .s:fg_green       .s:bg_none        .s:fmt_bold
 "        Structure"
@@ -233,13 +233,13 @@ exe "hi! Conditional"     .s:fg_red         .s:bg_none        .s:fmt_bold
 "        Keyword"
 "        Exception"
 
-exe "hi! PreProc"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Include"         .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Define"          .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! Macro"           .s:fg_orangered   .s:bg_none        .s:fmt_bold
-exe "hi! PreCondit"       .s:fg_orangered   .s:bg_none        .s:fmt_bold
+exe "hi! PreProc"         .s:fg_grassgreen   .s:bg_none        .s:fmt_bold
+exe "hi! Include"         .s:fg_grassgreen   .s:bg_none        .s:fmt_bold
+exe "hi! Define"          .s:fg_grassgreen   .s:bg_none        .s:fmt_bold
+exe "hi! Macro"           .s:fg_grassgreen   .s:bg_none        .s:fmt_bold
+exe "hi! PreCondit"       .s:fg_grassgreen   .s:bg_none        .s:fmt_bold
 
-exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
+exe "hi! Special"         .s:fg_green        .s:bg_none        .s:fmt_none
 "        SpecialKey
 "        SpecialChar"
 "        Tag"
@@ -247,7 +247,7 @@ exe "hi! Special"         .s:fg_green       .s:bg_none        .s:fmt_none
 "        SpecialComment"
 "        Debug"
 
-exe "hi! Underlined"          .s:fg_orangered   .s:bg_none        .s:fmt_none
+exe "hi! Underlined"          .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! Ignore"              .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"               .s:fg_red         .s:bg_error       .s:fmt_undr
 
@@ -259,6 +259,12 @@ else
     exe "hi! Comment"         .s:fg_comment     .s:bg_none        .s:fmt_none
 endif
 
+" NerdTree
+" --------
+
+exe "hi! NERDTreeOpenable"    .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeClosable"    .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+
 " Language highlight
 " ------------------
 
@@ -266,7 +272,7 @@ endif
 exe "hi! vimCommand"                .s:fg_red          .s:bg_none          .s:fmt_none
 
 " Javascript
-exe "hi! jsFuncName"                .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! jsFuncName"                .s:fg_grassgreen   .s:bg_none          .s:fmt_none
 exe "hi! jsThis"                    .s:fg_green        .s:bg_none          .s:fmt_none
 exe "hi! jsFuncCall"                .s:fg_none         .s:bg_none          .s:fmt_none
 
@@ -280,7 +286,7 @@ endif
 exe "hi! htmlTag"                   .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! htmlEndTag"                .s:fg_foreground   .s:bg_none          .s:fmt_none
 exe "hi! htmlTagName"               .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! htmlArg"                   .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! htmlArg"                   .s:fg_grassgreen   .s:bg_none          .s:fmt_none
 exe "hi! htmlSpecialChar"           .s:fg_purple       .s:bg_none          .s:fmt_none
 
 " Xml
@@ -293,7 +299,7 @@ hi! link xmlAttrib  htmlArg
 exe "hi! cssFunctionName"           .s:fg_green        .s:bg_none          .s:fmt_none
 exe "hi! cssColor"                  .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! cssPseudoClassId"          .s:fg_purple       .s:bg_none          .s:fmt_none
-exe "hi! cssClassName"              .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! cssClassName"              .s:fg_grassgreen   .s:bg_none          .s:fmt_none
 exe "hi! cssValueLength"            .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! cssCommonAttr"             .s:fg_red          .s:bg_none          .s:fmt_none
 exe "hi! cssBraces"                 .s:fg_none         .s:bg_none          .s:fmt_none
@@ -311,11 +317,11 @@ exe "hi! rubyGlobalVariable"            .s:fg_none         .s:bg_none          .
 exe "hi! rubyClassVariable"             .s:fg_none         .s:bg_none          .s:fmt_none
 exe "hi! rubyPseudoVariable"            .s:fg_none         .s:bg_none          .s:fmt_none
 exe "hi! rubyOperator"                  .s:fg_red          .s:bg_none          .s:fmt_none
-exe "hi! rubyFunction"                  .s:fg_orangered    .s:bg_none          .s:fmt_none
-exe "hi! rubyInclude"                   .s:fg_orangered    .s:bg_none          .s:fmt_none
-exe "hi! rubyStringDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexp"                    .s:fg_grassgreen   .s:bg_none          .s:fmt_none
-exe "hi! rubyRegexpDelimiter"           .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyFunction"                  .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyInclude"                   .s:fg_grassgreen   .s:bg_none          .s:fmt_none
+exe "hi! rubyStringDelimiter"           .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexp"                    .s:fg_orangered    .s:bg_none          .s:fmt_none
+exe "hi! rubyRegexpDelimiter"           .s:fg_orangered    .s:bg_none          .s:fmt_none
 exe "hi! rubySymbol"                    .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! rubyEscape"                    .s:fg_purple       .s:bg_none          .s:fmt_none
 exe "hi! rubyControl"                   .s:fg_green        .s:bg_none          .s:fmt_none
