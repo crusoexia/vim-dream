@@ -41,7 +41,7 @@ if has("gui_running")
   let s:window     = "#3E4E41"
   let s:line       = "#3E4044"
   let s:lineNr     = "#6C6D7A"
-  let s:darkcolumn = "#2c2c2c"
+  let s:darkcolumn = "#2A2C2A"
   let s:selection  = "#575b61"
   let s:comment    = "#8D969F"
   let s:error      = "#5F0000"
@@ -206,6 +206,7 @@ exe "hi! PmenuSel"        .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 " Generic Syntax Highlighting
 " ---------------------------
 
+" TODO: italic Constant
 exe "hi! Constant"        .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Number"          .s:fg_purple      .s:bg_none        .s:fmt_none
 exe "hi! Float"           .s:fg_purple      .s:bg_none        .s:fmt_none
@@ -219,7 +220,7 @@ exe "hi! Function"        .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Statement"       .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Operator"        .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! Label"           .s:fg_orange      .s:bg_none        .s:fmt_none
-"        Conditional"
+exe "hi! Conditional"     .s:fg_red         .s:bg_none        .s:fmt_bold
 "        Repeat"
 "        Keyword"
 "        Exception"
