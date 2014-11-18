@@ -270,7 +270,7 @@ exe "hi! NERDTreeOpenable"          .s:fg_red         .s:bg_none        .s:fmt_n
 exe "hi! NERDTreeClosable"          .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeHelp"              .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeBookmarksHeader"   .s:fg_red         .s:bg_none        .s:fmt_none
-exe "hi! NERDTreeBookmarksLeader"   .s:fg_red         .s:bg_none        .s:fmt_bold
+exe "hi! NERDTreeBookmarksLeader"   .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeBookmarkName"      .s:fg_darkgreen   .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeCWD"               .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeDirSlash"          .s:fg_orangered   .s:bg_none        .s:fmt_none
