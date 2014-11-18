@@ -1,7 +1,7 @@
 Vim dream
 =========
 
-A color scheme for vim, provide both dark and light theme.
+An originate color scheme for vim. 
 
 Install
 -------
@@ -17,14 +17,14 @@ _Dream:_
 
     colorscheme dream
 
-_Dream light:_
+Configuration
+-------------
 
-    colorscheme dream-light
+* Italic
 
-Original dream-dark theme
--------------------------
+If your font support italic, to enable the it, use:
 
-For the original _dream-dark_ user, please refer to [vim-dracula](https://github.com/crusoexia/vim-dracula)
+    let g:dream_italic = 1
 
 Javascript
 ----------
@@ -34,10 +34,4 @@ Works better with [vim-javascript](https://github.com/pangloss/vim-javascript), 
 Screenshots
 -----------
 
-_Dream:_
-
 ![dream-dark](./screenshots/dream-dark.png)
-
-_Dream light:_
-
-![dream-light](./screenshots/dream-light.png)
