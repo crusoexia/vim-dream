@@ -39,10 +39,10 @@ if has("gui_running")
   let s:background = "#2A2B30"
   let s:foreground = "#EAECEB"
   let s:window     = "#3E4E41"
-  let s:line       = "#3E4044"
+  let s:line       = "#3C3C41"
   let s:lineNr     = "#6C6D7A"
   let s:darkcolumn = "#2A2C2A"
-  let s:selection  = "#575b61"
+  let s:selection  = "#494C51"
   let s:comment    = "#8D969F"
   let s:error      = "#5F0000"
 
@@ -266,11 +266,12 @@ endif
 " NerdTree
 " --------
 
-exe "hi! NERDTreeOpenable"          .s:fg_darkgreen   .s:bg_none        .s:fmt_none
-exe "hi! NERDTreeClosable"          .s:fg_darkgreen   .s:bg_none        .s:fmt_none
-exe "hi! NERDTreeHelp"              .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeOpenable"          .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeClosable"          .s:fg_red         .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeHelp"              .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeBookmarksLeader"   .s:fg_red         .s:bg_none        .s:fmt_none
-exe "hi! NERDTreeBookmarkName"      .s:fg_orange      .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeBookmarkName"      .s:fg_darkgreen   .s:bg_none        .s:fmt_none
+exe "hi! NERDTreeDirSlash"          .s:fg_orangered   .s:bg_none        .s:fmt_none
 
 " Language highlight
 " ------------------
