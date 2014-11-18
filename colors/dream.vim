@@ -178,7 +178,7 @@ exe "hi! StatusLineNC"    .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 exe "hi! Visual"          .s:fg_none        .s:bg_selection   .s:fmt_none
 exe "hi! Search"          .s:fg_background  .s:bg_grassgreen  .s:fmt_none
-exe "hi! MatchParen"      .s:fg_background  .s:bg_green       .s:fmt_none
+exe "hi! MatchParen"      .s:fg_background  .s:bg_grassgreen  .s:fmt_none
 exe "hi! Question"        .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! ModeMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"         .s:fg_grassgreen  .s:bg_none        .s:fmt_none
