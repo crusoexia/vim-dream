@@ -169,10 +169,10 @@ exe "hi! ColorColumn"     .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorColumn"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"      .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"    .s:fg_grassgreen  .s:bg_none        .s:fmt_bold
+exe "hi! LineNr"          .s:fg_lineNr      .s:bg_none        .s:fmt_none
+exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! VertSplit"       .s:fg_green       .s:bg_none        .s:fmt_none
 exe "hi! NonText"         .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! SignColumn"      .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
-exe "hi! LineNr"          .s:fg_lineNr      .s:bg_none        .s:fmt_none
 exe "hi! StatusLine"      .s:fg_comment     .s:bg_background  .s:fmt_revr
 exe "hi! StatusLineNC"    .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"         .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
