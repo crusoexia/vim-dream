@@ -256,7 +256,7 @@ exe "hi! Ignore"              .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! Error"               .s:fg_red         .s:bg_error       .s:fmt_undr
 
 exe "hi! SpellBad"            .s:fg_red         .s:bg_error       .s:fmt_undr
-exe "hi! SpellCap"            .s:fg_orange      .s:bg_green       .s:fmt_undr
+exe "hi! SpellCap"            .s:fg_orange      .s:bg_darkcolumn  .s:fmt_undb
 
 if g:dream_italic == 1
     exe "hi! Todo"            .s:fg_orange      .s:bg_none        .s:fmt_bldi
