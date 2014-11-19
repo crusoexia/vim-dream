@@ -278,6 +278,12 @@ exe "hi! NERDTreeBookmarkName"      .s:fg_darkgreen   .s:bg_none        .s:fmt_n
 exe "hi! NERDTreeCWD"               .s:fg_red         .s:bg_none        .s:fmt_none
 exe "hi! NERDTreeDirSlash"          .s:fg_orangered   .s:bg_none        .s:fmt_none
 
+" Syntastic
+" ---------
+
+hi! link SyntasticErrorSign Error
+exe "hi! SyntasticWarningSign"      .s:fg_orange      .s:bg_darkcolumn  .s:fmt_none
+
 " Language highlight
 " ------------------
 
