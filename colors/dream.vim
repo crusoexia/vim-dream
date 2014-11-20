@@ -187,7 +187,7 @@ exe "hi! WarningMsg"      .s:fg_red         .s:bg_none        .s:fmt_none
 
 " misc
 exe "hi! SpecialKey"      .s:fg_selection   .s:bg_none        .s:fmt_none
-exe "hi! Title"           .s:fg_grassgreen  .s:bg_none        .s:fmt_none
+exe "hi! Title"           .s:fg_orangered   .s:bg_none        .s:fmt_none
 exe "hi! Directory"       .s:fg_green       .s:bg_none        .s:fmt_bold
 
 " diff
